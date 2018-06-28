@@ -1,0 +1,157 @@
+[ 2018-06-28T11:07:28+08:00 ] 10.149.64.216 /Monitor_cyxy/app/index.php/Home/Info/send_init_info
+ERR: Cron:测试执行定时任务 Runat 2018-06-28 11:07:28 Use 0.468216 s 
+
+[ 2018-06-28T11:07:28+08:00 ] 10.149.64.216 /Monitor_cyxy/app/index.php/Home/Info/send_init_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='room_para' or c.relname = lower('room_para'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.005664s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='tem_hum_para' or c.relname = lower('tem_hum_para'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.002243s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 284 行.
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='room_sensor' or c.relname = lower('room_sensor'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.002134s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '0'  [ RunTime:0.001047s ]
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '0' AND room_id = 'b105'  [ RunTime:0.038121s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '0' AND room_id = 'b105' LIMIT 1   [ RunTime:0.002125s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('0','b105',0,0,'2018-06-28 11:00:00') [ RunTime:0.005700s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '0' AND room_id = 'zxs'  [ RunTime:0.029847s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '0' AND room_id = 'zxs' LIMIT 1   [ RunTime:0.001586s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('0','zxs',0,0,'2018-06-28 11:00:00') [ RunTime:0.007128s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '0' AND room_id = 'lpd'  [ RunTime:0.028796s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '0' AND room_id = 'lpd' LIMIT 1   [ RunTime:0.001545s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('0','lpd',0,0,'2018-06-28 11:00:00') [ RunTime:0.002364s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '0' AND room_id = 'pl'  [ RunTime:0.026333s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '0' AND room_id = 'pl' LIMIT 1   [ RunTime:0.001484s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('0','pl',0,0,'2018-06-28 11:00:00') [ RunTime:0.005249s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '0' AND room_id = 'dating'  [ RunTime:0.024795s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '0' AND room_id = 'dating' LIMIT 1   [ RunTime:0.001432s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('0','dating',0,0,'2018-06-28 11:00:00') [ RunTime:0.006507s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+SQL: SELECT * FROM room_sensor WHERE floor_id = '1'  [ RunTime:0.000333s ]
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '1' AND room_id = 'A307'  [ RunTime:0.024699s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '1' AND room_id = 'A307' LIMIT 1   [ RunTime:0.001416s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('1','A307',0,0,'2018-06-28 11:00:00') [ RunTime:0.006262s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+SQL: SELECT * FROM room_sensor WHERE floor_id = '2'  [ RunTime:0.000308s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '3'  [ RunTime:0.000212s ]
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '3' AND room_id = 'a404'  [ RunTime:0.024741s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '3' AND room_id = 'a404' LIMIT 1   [ RunTime:0.001336s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('3','a404',0,0,'2018-06-28 11:00:00') [ RunTime:0.006239s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '3' AND room_id = 'a403'  [ RunTime:0.024781s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '3' AND room_id = 'a403' LIMIT 1   [ RunTime:0.001346s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('3','a403',0,0,'2018-06-28 11:00:00') [ RunTime:0.006863s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+SQL: SELECT * FROM room_sensor WHERE floor_id = '4'  [ RunTime:0.000322s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '5'  [ RunTime:0.000210s ]
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '5' AND room_id = 'a601'  [ RunTime:0.024743s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '5' AND room_id = 'a601' LIMIT 1   [ RunTime:0.001325s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('5','a601',0,0,'2018-06-28 11:00:00') [ RunTime:0.005986s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '5' AND room_id = 'a602'  [ RunTime:0.024757s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '5' AND room_id = 'a602' LIMIT 1   [ RunTime:0.001374s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('5','a602',0,0,'2018-06-28 11:00:00') [ RunTime:0.001259s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+SQL: SELECT * FROM room_sensor WHERE floor_id = '6'  [ RunTime:0.000341s ]
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '6' AND room_id = 'yz6'  [ RunTime:0.024777s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '6' AND room_id = 'yz6' LIMIT 1   [ RunTime:0.001324s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('6','yz6',0,0,'2018-06-28 11:00:00') [ RunTime:0.006326s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '6' AND room_id = 'yz9'  [ RunTime:0.024777s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59' AND floor_id = '6' AND room_id = 'yz9' LIMIT 1   [ RunTime:0.001339s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('6','yz9',0,0,'2018-06-28 11:00:00') [ RunTime:0.006952s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/IndexController.class.php 第 330 行.
+NOTIC: [2] mkdir(): Invalid path /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Library/Think/Log/Driver/File.class.php 第 39 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.469882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.470664s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/Monitor_cyxy/ThinkPHP/Common/functions.php 第 1190 行.
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/InfoController.class.php 第 657 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 0:00:00' AND '2018-06-28 0:59:59'  [ RunTime:0.001022s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/InfoController.class.php 第 657 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 1:00:00' AND '2018-06-28 1:59:59'  [ RunTime:0.001020s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/InfoController.class.php 第 657 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 2:00:00' AND '2018-06-28 2:59:59'  [ RunTime:0.000937s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/InfoController.class.php 第 657 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 3:00:00' AND '2018-06-28 3:59:59'  [ RunTime:0.000916s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/InfoController.class.php 第 657 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 4:00:00' AND '2018-06-28 4:59:59'  [ RunTime:0.000907s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/InfoController.class.php 第 657 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 5:00:00' AND '2018-06-28 5:59:59'  [ RunTime:0.000910s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/InfoController.class.php 第 657 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 6:00:00' AND '2018-06-28 6:59:59'  [ RunTime:0.001029s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/InfoController.class.php 第 657 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 7:00:00' AND '2018-06-28 7:59:59'  [ RunTime:0.000922s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/InfoController.class.php 第 657 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 8:00:00' AND '2018-06-28 8:59:59'  [ RunTime:0.000905s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/InfoController.class.php 第 657 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 9:00:00' AND '2018-06-28 9:59:59'  [ RunTime:0.000904s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/InfoController.class.php 第 657 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 10:00:00' AND '2018-06-28 10:59:59'  [ RunTime:0.000905s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_cyxy/app/Home/Controller/InfoController.class.php 第 657 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-28 11:00:00' AND '2018-06-28 11:59:59'  [ RunTime:0.000963s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000517s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000565s ]
+

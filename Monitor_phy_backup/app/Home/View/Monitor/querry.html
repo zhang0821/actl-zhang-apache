@@ -1,0 +1,55 @@
+	<div id="checkBox" >
+		<div class="checkBoxTop" >
+			<a>一周内历史记录查询</a>
+			
+			<div class="closeBTN" onclick="QuerSetClose('querry')">
+				<a>+</a>
+			</div>
+			
+			<div id="hisDateBox" onclick="chooseHisDateBox(0)">
+				今天
+			</div>
+
+			<div class="typeChooseBox" onclick="chooseTypeBox(0)" >温度</div>
+
+
+		</div>
+		
+		<div class="dateLiBox">
+			<li onclick="chooseHisDateBox(8)">
+			今天
+			</li>
+			<li onclick="chooseHisDateBox(1)">
+			前1天
+			</li>
+			<li onclick="chooseHisDateBox(2)">
+			前2天
+			</li>
+			<li onclick="chooseHisDateBox(3)">
+			前3天
+			</li>
+			<li onclick="chooseHisDateBox(4)">
+			前4天
+			</li>
+			<li onclick="chooseHisDateBox(5)">
+			前5天
+			</li>
+			<li onclick="chooseHisDateBox(6)">
+			前6天
+			</li>
+			<li onclick="chooseHisDateBox(7)">
+			前7天
+			</li>
+		</div>
+		
+		<div class="typeLiBox">
+			<li onclick="chooseTypeBox(1)">湿度</li>
+		</div>
+
+
+		<div id="hisDataContainer" >
+		
+
+		</div>
+		
+	</div>

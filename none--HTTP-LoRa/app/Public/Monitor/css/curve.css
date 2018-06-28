@@ -1,0 +1,132 @@
+.curveTitle{
+	width: 90%;
+	height: 80px;
+	margin-top: 10px;	
+	margin-left: 5%;		
+	background: rgba(239,228,176,0.9);
+	border-radius: 20px;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+}
+.curveTitle p{
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	height: 60px;
+	margin-top:10px;
+	text-align: center;
+	color: #fff;
+	font:60px "微软雅黑";
+	
+}
+.curveBox{
+	width: 90%;
+	margin-left: 5%;
+	height: 720px;
+	margin-top: 20px;
+	/*overflow-x: auto;*/
+	/*background: rgba(239,228,176,0.9);去掉*/
+}
+.CCBox{
+	height: 300px;
+	margin-top: 40px;
+	width: 42.5%;
+	float: left;
+	margin-left: 5%;
+	border-radius: 10px;
+	position: relative;
+	cursor:pointer;
+
+	
+}
+.CBox{
+	height: 90%;
+	margin-top: 2%;
+	width: 96%;
+	margin-left: 2%;
+	border-radius: 5px;
+	
+}
+.waterWarnBox{
+	position: absolute;
+	width: auto;
+	height: 220px;
+	top: 50px;
+	text-align: center;
+	opacity: 0;
+}
+.waterWarnBox p{
+	width: 40px;
+	height: 100%;
+	background-color:rgba(255,201,14,0.5);
+	color:#fff;
+	font-size:20px;
+	font-family: 微软雅黑;
+	border-radius:30px;
+}
+.waterWarnBox1,.waterWarnBox3{
+	right: -25px;/*要显示时，值是-150*/
+}
+
+.waterWarnBox2,.waterWarnBox4{
+	left: -25px;/*要显示时，值是-150*/
+}
+.doorWarnBox,.smokeWarnBox{
+	position: absolute;
+	width: 200px;
+	height: 80px;
+	top: 110px;
+	opacity: 1;
+}
+.smokeWarnBox{
+	top: 200px;
+}
+.doorWarnBox p,.smokeWarnBox p{
+	width: auto;
+	height: 100%;
+	background-color:rgba(255,201,14,0.5);
+	line-height: 80px;
+	color:#fff;
+	font-size:20px;
+	font-family: 微软雅黑;
+	border-radius:30px;
+}
+
+
+.doorWarnBox1,.doorWarnBox3,.smokeWarnBox1,.smokeWarnBox3{
+	left: 5px;/*要显示时，值是-150*/
+}
+.doorWarnBox1 p,.doorWarnBox3 p,.smokeWarnBox1 p,.smokeWarnBox3 p{
+	float: left;
+}
+.doorWarnBox2,.doorWarnBox4,.smokeWarnBox2,.smokeWarnBox4{
+	right: 5px;/*要显示时，值是-150*/
+}
+.doorWarnBox2 p,.doorWarnBox4 p,.smokeWarnBox2 p,.smokeWarnBox4 p{
+	float: right;
+}
+/*纯样式图标*/
+/**/
+.CCBox:before{
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width:90%;
+	height: 90%;
+	top:5%;
+	left:5%;
+	background:transparent;
+	box-shadow: 8px 8px 20px rgba(34,117,76,1);
+	transform: skew(-15deg) rotate(-5deg);
+}
+.CCBox:after{
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width:90%;
+	height: 90%;
+	top:5%;
+	left:5%;
+	background:transparent;
+	box-shadow: -8px 8px 20px rgba(34,117,76,1);
+	transform: skew(15deg) rotate(5deg);
+}

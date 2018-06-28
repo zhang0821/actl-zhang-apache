@@ -1,0 +1,173 @@
+[ 2018-06-28T12:26:14+08:00 ] 10.149.64.138 /hyx/app/index.php/Home/Info/search
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000752s ]
+ERR: 无法加载控制器:Info
+
+[ 2018-06-28T12:27:02+08:00 ] 10.149.64.138 /hyx/app/index.php/Home/Index/search
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000743s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/hyx/app/Home/Controller/IndexController.class.php 第 4 行.
+ERR: 没有定义数据库配置
+
+[ 2018-06-28T12:30:21+08:00 ] 10.149.64.138 /hyx/app/index.php/Home/Index/search
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/hyx/app/Home/Controller/IndexController.class.php 第 4 行.
+NOTIC: [2] pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: 连接超时
+	Is the server running on host &quot;10.191.190.28&quot; and accepting
+	TCP/IP connections on port 5432? /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 45 行.
+NOTIC: [2] pg_last_error() expects parameter 1 to be resource, null given /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 257 行.
+ERR: 
+ERR: 
+
+[ 2018-06-28T12:32:09+08:00 ] 10.149.64.216 /hyx/app/index.php/Home/Index/search
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/hyx/app/Home/Controller/IndexController.class.php 第 4 行.
+NOTIC: [2] pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: 连接超时
+	Is the server running on host &quot;10.191.190.28&quot; and accepting
+	TCP/IP connections on port 5432? /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 45 行.
+NOTIC: [2] pg_last_error() expects parameter 1 to be resource, null given /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 257 行.
+ERR: 
+ERR: 
+
+[ 2018-06-28T12:32:28+08:00 ] 10.149.64.138 /hyx/app/index.php/Home/Index/search
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000663s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000753s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/hyx/app/Home/Controller/IndexController.class.php 第 4 行.
+NOTIC: [2] pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: 连接超时
+	Is the server running on host &quot;10.191.190.28&quot; and accepting
+	TCP/IP connections on port 5432? /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 45 行.
+NOTIC: [2] pg_last_error() expects parameter 1 to be resource, null given /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 257 行.
+ERR: 
+ERR: 
+
+[ 2018-06-28T12:33:40+08:00 ] 10.149.64.216 /hyx/app/index.php/Home/Index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000693s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/hyx/app/Home/Controller/IndexController.class.php 第 4 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2018-06-28T12:34:35+08:00 ] 10.149.64.138 /hyx/app/index.php/Home/Index/search
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000627s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/hyx/app/Home/Controller/IndexController.class.php 第 4 行.
+NOTIC: [2] pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: 连接超时
+	Is the server running on host &quot;10.191.190.28&quot; and accepting
+	TCP/IP connections on port 5432? /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 45 行.
+NOTIC: [2] pg_last_error() expects parameter 1 to be resource, null given /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 257 行.
+ERR: 
+ERR: 
+
+[ 2018-06-28T12:34:35+08:00 ] 10.149.64.138 /hyx/app/index.php/Home/Index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000621s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/hyx/app/Home/Controller/IndexController.class.php 第 4 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000904s ]
+
+[ 2018-06-28T12:36:12+08:00 ] 10.149.64.216 /hyx/app/index.php/Home/Index/search
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000660s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/hyx/app/Home/Controller/IndexController.class.php 第 4 行.
+NOTIC: [2] pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: 连接超时
+	Is the server running on host &quot;10.191.190.28&quot; and accepting
+	TCP/IP connections on port 5432? /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 45 行.
+NOTIC: [2] pg_last_error() expects parameter 1 to be resource, null given /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 257 行.
+ERR: 
+ERR: 
+
+[ 2018-06-28T12:37:34+08:00 ] 10.149.64.138 /hyx/app/index.php/Home/Index/test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000738s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/hyx/app/Home/Controller/IndexController.class.php 第 4 行.
+ERR: 非法操作:test
+
+[ 2018-06-28T12:39:50+08:00 ] 10.149.64.138 /hyx/app/index.php/Home/Index/search
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/hyx/app/Home/Controller/IndexController.class.php 第 4 行.
+NOTIC: [2] pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: 连接超时
+	Is the server running on host &quot;10.191.190.28&quot; and accepting
+	TCP/IP connections on port 5432? /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 45 行.
+NOTIC: [2] pg_last_error() expects parameter 1 to be resource, null given /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 257 行.
+ERR: 
+ERR: 
+
+[ 2018-06-28T12:40:01+08:00 ] 10.149.64.216 /hyx/app/index.php/Home/Index/search
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/hyx/app/Home/Controller/IndexController.class.php 第 4 行.
+NOTIC: [2] pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: 连接超时
+	Is the server running on host &quot;10.191.190.28&quot; and accepting
+	TCP/IP connections on port 5432? /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 45 行.
+NOTIC: [2] pg_last_error() expects parameter 1 to be resource, null given /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 257 行.
+ERR: 
+ERR: 
+
+[ 2018-06-28T12:42:08+08:00 ] 10.149.64.216 /hyx/app/index.php/Home/Index/search
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/hyx/app/Home/Controller/IndexController.class.php 第 4 行.
+NOTIC: [2] pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: 连接超时
+	Is the server running on host &quot;10.191.190.28&quot; and accepting
+	TCP/IP connections on port 5432? /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 45 行.
+NOTIC: [2] pg_last_error() expects parameter 1 to be resource, null given /home/actl/actl/zhangl/apache/hyx/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 257 行.
+ERR: 
+ERR: 
+

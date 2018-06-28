@@ -1,0 +1,137 @@
+
+.typeBox a{
+	cursor: pointer;
+	position: relative;
+	width: 20%;
+	top: 30%;
+}
+.typeBox a:hover{
+	font-weight: bold;
+	color: #fff;
+}
+.Box1 a,.Box3 a{	
+	left: 85%;
+}
+.Box2 a,.Box4 a{	
+	left: 3%;
+}
+.contentBoxR{
+	position: absolute;
+	width: 79%;
+	height: 80%;
+	top:10%;
+	left:10%;
+	text-align: center;
+	overflow-y: auto;
+}
+.contentBoxL{
+	position: absolute;
+	width: 79%;
+	height: 80%;
+	top:10%;
+	left:10%;
+	text-align: center;
+	overflow-y: auto;
+}
+.contentBoxR li{
+	width:90%;
+	height: 35px;
+	line-height: 35px;
+	margin-top: 15px;
+	float: left;
+	margin-left: 10%;
+	cursor: pointer;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 10px;
+}
+.contentBoxR li:hover{
+	font-weight: bold;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+
+/****查询页面*****/
+
+#checkBox{
+	position:absolute;
+	border-radius:20px;
+	opacity:0;
+	z-index:-10;
+	border: 1px solid  #4A79A9;
+	background-image:url(../img/sky2.png);
+}
+.checkBoxTop{
+	position: relative;
+	width:100%;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	font:25px "微软雅黑";
+	color:#4A79A9;
+	border-bottom: 1px solid #4A79A9;
+	/*overflow:hidden;*/
+}
+.closeBTN a{
+	width:20px;height:20px;border-radius: 50% 50%;position: absolute;right:10px;top:10px; 
+	background:#002B58;transform: rotate(45deg);cursor: pointer;
+}
+.closeBTN{
+	line-height: 20px;font-size: 25px;font-weight: bold;
+}
+#hisDateBox,.typeChooseBox{
+	width:60px;
+	height:20px;
+	position: absolute;right:60px;top:10px; 
+	background:#002B58;
+	border-radius:5px;
+	font: 15px "微软雅黑";
+	text-align:center;	
+	cursor: pointer;
+}
+.dateLiBox,.typeLiBox{
+	position: absolute;
+	right:60px;top:40px; 
+	width:60px;
+	height:auto;
+	float:right;
+	margin-top:-10px;
+	z-index:-1000;
+	opacity:0;
+	cursor: pointer;
+	visibility:hidden;
+	
+}
+.typeChooseBox,.typeLiBox{
+	right:150px;
+	width:90px;
+}
+.dateLiBox li,.typeLiBox li{
+	width:100%;
+	height:20px;
+	float:left;
+	font: 15px "微软雅黑";
+	text-align:center;
+	background:#002B58;
+	border-radius:5px;
+	cursor: pointer;
+	color:rgba(34,117,76,0.9); 
+}
+.typeLiBox li{
+	float: left;
+}
+
+.dateLiBox li:hover,.typeLiBox li:hover{
+	background:#D6BE2E;
+	color: #fff;
+}
+#hisDataContainer{
+	position:absolute;
+	z-index:10;
+	width:99%;
+	height:600px;
+	float:left;
+	margin-left: 0.5%;
+	margin-top: 3px;
+}

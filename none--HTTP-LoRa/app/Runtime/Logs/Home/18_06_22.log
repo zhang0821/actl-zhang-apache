@@ -1,0 +1,96 @@
+[ 2018-06-22T15:05:52+08:00 ] 10.149.64.155 /HTTP-LoRa/app/
+ERR: Cron:测试执行定时任务 Runat 2018-06-22 15:05:52 Use 0.067167 s 
+
+[ 2018-06-22T15:05:52+08:00 ] 10.149.64.155 /HTTP-LoRa/app/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000811s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/actl/actl/zhangl/apache/HTTP-LoRa/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `got_data` [ RunTime:0.005372s ]
+ERR: 1146:Table 'lora_monitor_1.got_data' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `got_data`
+SQL: SELECT * FROM `got_data` ORDER BY datanum desc LIMIT 4   [ RunTime:0.000530s ]
+ERR: 1146:Table 'lora_monitor_1.got_data' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `got_data` ORDER BY datanum desc LIMIT 4  
+NOTIC: [2] mkdir(): Invalid path /home/actl/actl/zhangl/apache/HTTP-LoRa/ThinkPHP/Library/Think/Log/Driver/File.class.php 第 39 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.086319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.087276s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/HTTP-LoRa/app/Home/Controller/IndexController.class.php 第 4 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022789s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022917s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000484s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001058s ]
+
+[ 2018-06-22T15:05:52+08:00 ] 10.149.64.155 /HTTP-LoRa/app/index.php/Home/Index/apache_test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001144s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/HTTP-LoRa/app/Home/Controller/IndexController.class.php 第 4 行.
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='contact' or c.relname = lower('contact'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.005455s ]
+SQL: SELECT * FROM contact  [ RunTime:0.000658s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000972s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001081s ]
+
+[ 2018-06-22T15:06:09+08:00 ] 10.149.64.155 /HTTP-LoRa/app/index.php/Home/Index/apache_test
+ERR: Cron:测试执行定时任务 Runat 2018-06-22 15:06:09 Use 0.013111 s 
+
+[ 2018-06-22T15:06:09+08:00 ] 10.149.64.155 /HTTP-LoRa/app/index.php/Home/Index/apache_test
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000127s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead /home/actl/actl/zhangl/apache/HTTP-LoRa/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php 第 52 行.
+SQL: SHOW COLUMNS FROM `got_data` [ RunTime:0.001099s ]
+ERR: 1146:Table 'lora_monitor_1.got_data' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `got_data`
+SQL: SELECT * FROM `got_data` ORDER BY datanum desc LIMIT 4   [ RunTime:0.000190s ]
+ERR: 1146:Table 'lora_monitor_1.got_data' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `got_data` ORDER BY datanum desc LIMIT 4  
+NOTIC: [2] mkdir(): Invalid path /home/actl/actl/zhangl/apache/HTTP-LoRa/ThinkPHP/Library/Think/Log/Driver/File.class.php 第 39 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.014717s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015516s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/HTTP-LoRa/app/Home/Controller/IndexController.class.php 第 4 行.
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='contact' or c.relname = lower('contact'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.005555s ]
+SQL: SELECT * FROM contact  [ RunTime:0.000634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000981s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001070s ]
+

@@ -1,0 +1,625 @@
+[ 2018-06-14T15:31:37+08:00 ] 10.191.38.241 /Monitor_phy/app/
+ERR: Cron:测试执行定时任务 Runat 2018-06-14 15:31:37 Use 0.361623 s 
+
+[ 2018-06-14T15:31:37+08:00 ] 10.191.38.241 /Monitor_phy/app/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000138s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006732s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='room_para' or c.relname = lower('room_para'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.005406s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='tem_hum_para' or c.relname = lower('tem_hum_para'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.002244s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 80 行.
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='room_sensor' or c.relname = lower('room_sensor'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.002021s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '0'  [ RunTime:0.001069s ]
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '0' AND room_id = 'b105'  [ RunTime:0.020152s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '0' AND room_id = 'b105' LIMIT 1   [ RunTime:0.001995s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('0','b105',0,0,'2018-06-14 15:00:00') [ RunTime:0.012949s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '0' AND room_id = 'zxs'  [ RunTime:0.021067s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '0' AND room_id = 'zxs' LIMIT 1   [ RunTime:0.001738s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('0','zxs',0,0,'2018-06-14 15:00:00') [ RunTime:0.004575s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '0' AND room_id = 'lpd'  [ RunTime:0.018527s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '0' AND room_id = 'lpd' LIMIT 1   [ RunTime:0.001583s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('0','lpd',0,0,'2018-06-14 15:00:00') [ RunTime:0.001602s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '0' AND room_id = 'pl'  [ RunTime:0.016719s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '0' AND room_id = 'pl' LIMIT 1   [ RunTime:0.001430s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('0','pl',0,0,'2018-06-14 15:00:00') [ RunTime:0.009034s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '0' AND room_id = 'dating'  [ RunTime:0.015657s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '0' AND room_id = 'dating' LIMIT 1   [ RunTime:0.001366s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('0','dating',0,0,'2018-06-14 15:00:00') [ RunTime:0.004561s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+SQL: SELECT * FROM room_sensor WHERE floor_id = '1'  [ RunTime:0.000423s ]
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '1' AND room_id = 'A307'  [ RunTime:0.014803s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '1' AND room_id = 'A307' LIMIT 1   [ RunTime:0.001338s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('1','A307',0,0,'2018-06-14 15:00:00') [ RunTime:0.004806s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+SQL: SELECT * FROM room_sensor WHERE floor_id = '2'  [ RunTime:0.000318s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '3'  [ RunTime:0.000242s ]
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '3' AND room_id = 'a404'  [ RunTime:0.013713s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '3' AND room_id = 'a404' LIMIT 1   [ RunTime:0.001221s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('3','a404',0,0,'2018-06-14 15:00:00') [ RunTime:0.005943s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '3' AND room_id = 'a403'  [ RunTime:0.013058s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '3' AND room_id = 'a403' LIMIT 1   [ RunTime:0.001189s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('3','a403',0,0,'2018-06-14 15:00:00') [ RunTime:0.007660s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+SQL: SELECT * FROM room_sensor WHERE floor_id = '4'  [ RunTime:0.000525s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '5'  [ RunTime:0.000535s ]
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '5' AND room_id = 'a601'  [ RunTime:0.014302s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '5' AND room_id = 'a601' LIMIT 1   [ RunTime:0.001206s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('5','a601',0,0,'2018-06-14 15:00:00') [ RunTime:0.004312s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '5' AND room_id = 'a602'  [ RunTime:0.012944s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '5' AND room_id = 'a602' LIMIT 1   [ RunTime:0.001164s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('5','a602',0,0,'2018-06-14 15:00:00') [ RunTime:0.002125s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+SQL: SELECT * FROM room_sensor WHERE floor_id = '6'  [ RunTime:0.000365s ]
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '6' AND room_id = 'yz6'  [ RunTime:0.012935s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '6' AND room_id = 'yz6' LIMIT 1   [ RunTime:0.001156s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('6','yz6',0,0,'2018-06-14 15:00:00') [ RunTime:0.001280s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+SQL: SELECT temp_value,humi_value FROM tem_hum_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '6' AND room_id = 'yz9'  [ RunTime:0.012592s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59' AND floor_id = '6' AND room_id = 'yz9' LIMIT 1   [ RunTime:0.001099s ]
+SQL: INSERT INTO room_para (floor_id,room_id,temp_average,humi_average,datetime) VALUES ('6','yz9',0,0,'2018-06-14 15:00:00') [ RunTime:0.002181s ]
+NOTIC: [8] Undefined offset: 0 /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php 第 126 行.
+NOTIC: [8] Undefined variable: temp_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [8] Undefined variable: humi_total /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/IndexController.class.php 第 126 行.
+NOTIC: [2] mkdir(): Invalid path /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Library/Think/Log/Driver/File.class.php 第 39 行.
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.423539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.430422s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/actl/actl/zhangl/apache/Monitor_phy/ThinkPHP/Common/functions.php 第 1190 行.
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='user' or c.relname = lower('user'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.001370s ]
+SQL: SELECT * FROM user  [ RunTime:0.000213s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.090508s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.090591s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000335s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000842s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000917s ]
+
+[ 2018-06-14T15:31:38+08:00 ] 10.191.38.241 /Monitor_phy/app/index.php/Home/Info/sensor_type_search
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000164s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000673s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001276s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='room_sensor' or c.relname = lower('room_sensor'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.005641s ]
+SQL: SELECT DISTINCT  type FROM room_sensor  [ RunTime:0.001077s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001056s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001157s ]
+
+[ 2018-06-14T15:31:38+08:00 ] 10.191.38.241 /Monitor_phy/app/index.php/Home/Info/send_average_tem_hum
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000132s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001298s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='tem_hum_para' or c.relname = lower('tem_hum_para'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.005115s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='room_sensor' or c.relname = lower('room_sensor'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.002103s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '0'  [ RunTime:0.001129s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '0' AND room_id = 'b105' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.024992s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '0' AND room_id = 'zxs' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.020339s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '0' AND room_id = 'lpd' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.018833s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '0' AND room_id = 'pl' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017770s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '0' AND room_id = 'dating' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016838s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '1'  [ RunTime:0.000386s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '1' AND room_id = 'A307' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016676s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '2'  [ RunTime:0.000376s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '3'  [ RunTime:0.000217s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '3' AND room_id = 'a404' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016514s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '3' AND room_id = 'a403' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016654s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '4'  [ RunTime:0.000317s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '5'  [ RunTime:0.000209s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '5' AND room_id = 'a601' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016546s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '5' AND room_id = 'a602' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016610s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '6'  [ RunTime:0.000383s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '6' AND room_id = 'yz6' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016498s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '6' AND room_id = 'yz9' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016586s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7'  [ RunTime:0.000526s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9225' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016797s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9221' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016864s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9217' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016838s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9206' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016831s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9213' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016848s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9214' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016824s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9243' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016845s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9247' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016853s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9236' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017511s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9234' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017341s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9220' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017333s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9231' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017353s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9232' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017372s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9209' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017310s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9228' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017359s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9224' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017394s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9233' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017347s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9239' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017347s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9241' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017374s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9218' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017337s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9210' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017317s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9208' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017294s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9216' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017318s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9223' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000727s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000787s ]
+
+[ 2018-06-14T15:31:38+08:00 ] 10.191.38.241 /Monitor_phy/app/index.php/Home/Info/send_init_info
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001104s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='room_para' or c.relname = lower('room_para'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.005373s ]
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 0:00:00' AND '2018-06-14 0:59:59'  [ RunTime:0.002031s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 1:00:00' AND '2018-06-14 1:59:59'  [ RunTime:0.001570s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 2:00:00' AND '2018-06-14 2:59:59'  [ RunTime:0.001559s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 3:00:00' AND '2018-06-14 3:59:59'  [ RunTime:0.001559s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 4:00:00' AND '2018-06-14 4:59:59'  [ RunTime:0.001474s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 5:00:00' AND '2018-06-14 5:59:59'  [ RunTime:0.001471s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 6:00:00' AND '2018-06-14 6:59:59'  [ RunTime:0.001484s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 7:00:00' AND '2018-06-14 7:59:59'  [ RunTime:0.001474s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 8:00:00' AND '2018-06-14 8:59:59'  [ RunTime:0.001423s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 9:00:00' AND '2018-06-14 9:59:59'  [ RunTime:0.001379s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 10:00:00' AND '2018-06-14 10:59:59'  [ RunTime:0.001367s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 11:00:00' AND '2018-06-14 11:59:59'  [ RunTime:0.001368s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 12:00:00' AND '2018-06-14 12:59:59'  [ RunTime:0.001315s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 13:00:00' AND '2018-06-14 13:59:59'  [ RunTime:0.001322s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 14:00:00' AND '2018-06-14 14:59:59'  [ RunTime:0.001406s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 531 行.
+SQL: SELECT * FROM room_para WHERE datetime BETWEEN '2018-06-14 15:00:00' AND '2018-06-14 15:59:59'  [ RunTime:0.001376s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2018-06-14T15:31:39+08:00 ] 10.191.38.241 /Monitor_phy/app/index.php/Home/Info/send_average_tem_hum
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000076s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='tem_hum_para' or c.relname = lower('tem_hum_para'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.005638s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='room_sensor' or c.relname = lower('room_sensor'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.002291s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '0'  [ RunTime:0.001142s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '0' AND room_id = 'b105' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.024750s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '0' AND room_id = 'zxs' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.020156s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '0' AND room_id = 'lpd' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.020632s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '0' AND room_id = 'pl' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.018639s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '0' AND room_id = 'dating' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017564s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '1'  [ RunTime:0.000426s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '1' AND room_id = 'A307' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016417s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '2'  [ RunTime:0.000365s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '3'  [ RunTime:0.000221s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '3' AND room_id = 'a404' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015764s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '3' AND room_id = 'a403' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015685s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '4'  [ RunTime:0.000402s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '5'  [ RunTime:0.000214s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '5' AND room_id = 'a601' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015644s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '5' AND room_id = 'a602' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015699s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '6'  [ RunTime:0.000419s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '6' AND room_id = 'yz6' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015648s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '6' AND room_id = 'yz9' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015763s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7'  [ RunTime:0.000507s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9225' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015913s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9221' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015954s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9217' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015944s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9206' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015933s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9213' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015943s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9214' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015947s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9243' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015964s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9247' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015943s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9236' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015995s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9234' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015940s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9220' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015949s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9231' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015959s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9232' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015947s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9209' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015921s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9228' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015951s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9224' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015959s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9233' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016002s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9239' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015967s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9241' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015951s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9218' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016194s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9210' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015873s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9208' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015837s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9216' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015881s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' /home/actl/actl/zhangl/apache/Monitor_phy/app/Home/Controller/InfoController.class.php 第 477 行.
+SQL: SELECT * FROM tem_hum_para WHERE floor_id = '7' AND room_id = '9223' AND datetime BETWEEN '2018-06-14 00:00:00' AND '2018-06-14 23:59:59' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015904s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000685s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000743s ]
+
+[ 2018-06-14T15:31:40+08:00 ] 10.191.38.241 /Monitor_phy/app/index.php/Home/Info/send_SsInfo_web
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: Run Behavior\CronRunBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001166s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='room_info' or c.relname = lower('room_info'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.003385s ]
+SQL: SELECT * FROM room_info WHERE floor_id = '7'  [ RunTime:0.000840s ]
+SQL: SELECT * FROM room_info WHERE floor_id = '7' ORDER BY alarm_time desc LIMIT 1   [ RunTime:0.000609s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='room_sensor' or c.relname = lower('room_sensor'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.001304s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9206'  [ RunTime:0.000473s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='tem_hum_para' or c.relname = lower('tem_hum_para'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.001246s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000047' ORDER BY datetime desc LIMIT 1   [ RunTime:0.016777s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='smoke_para' or c.relname = lower('smoke_para'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.001543s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000031' ORDER BY datetime desc LIMIT 1   [ RunTime:0.019492s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9241'  [ RunTime:0.000390s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '010000000000004e' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015186s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000028' ORDER BY datetime desc LIMIT 1   [ RunTime:0.019189s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9232'  [ RunTime:0.000380s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '060000000000003b' ORDER BY datetime desc LIMIT 1   [ RunTime:0.018581s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000058' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015296s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9223'  [ RunTime:0.000383s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000042' ORDER BY datetime desc LIMIT 1   [ RunTime:0.014873s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '060000000000003a' ORDER BY datetime desc LIMIT 1   [ RunTime:0.019132s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9233'  [ RunTime:0.000380s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000065' ORDER BY datetime desc LIMIT 1   [ RunTime:0.014943s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '060000000000003c' ORDER BY datetime desc LIMIT 1   [ RunTime:0.019263s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9224'  [ RunTime:0.000378s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000017' ORDER BY datetime desc LIMIT 1   [ RunTime:0.018846s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '010000000000005c' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015114s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9225'  [ RunTime:0.000379s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '060000000000002c' ORDER BY datetime desc LIMIT 1   [ RunTime:0.019048s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000055' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015304s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9239'  [ RunTime:0.000380s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '010000000000005e' ORDER BY datetime desc LIMIT 1   [ RunTime:0.020958s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000033' ORDER BY datetime desc LIMIT 1   [ RunTime:0.025506s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000033' ORDER BY datetime desc LIMIT 1   [ RunTime:0.022284s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9228'  [ RunTime:0.000489s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000052' ORDER BY datetime desc LIMIT 1   [ RunTime:0.017281s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '060000000000001c' ORDER BY datetime desc LIMIT 1   [ RunTime:0.020415s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='door_para' or c.relname = lower('door_para'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.001795s ]
+SQL: SELECT * FROM door_para WHERE dev_eui = '0500000000000020' ORDER BY datetime desc LIMIT 1   [ RunTime:0.002063s ]
+SQL: select a.attname as "Field",
+            t.typname as "Type",
+            a.attnotnull as "Null",
+            i.indisprimary as "Key",
+            d.adsrc as "Default"
+            from pg_class c
+            inner join pg_attribute a on a.attrelid = c.oid
+            inner join pg_type t on a.atttypid = t.oid
+            left join pg_attrdef d on a.attrelid=d.adrelid and d.adnum=a.attnum
+            left join pg_index i on a.attnum=ANY(i.indkey) and c.oid = i.indrelid
+            where (c.relname='water_para' or c.relname = lower('water_para'))   AND a.attnum > 0
+                order by a.attnum asc; [ RunTime:0.001263s ]
+SQL: SELECT * FROM water_para WHERE dev_eui = '0400000000001000' ORDER BY datetime desc LIMIT 1   [ RunTime:0.000468s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000001' ORDER BY datetime desc LIMIT 1   [ RunTime:0.018159s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9243'  [ RunTime:0.000420s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000057' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015357s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000047' ORDER BY datetime desc LIMIT 1   [ RunTime:0.019105s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9236'  [ RunTime:0.000356s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000024' ORDER BY datetime desc LIMIT 1   [ RunTime:0.018456s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000043' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015147s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9234'  [ RunTime:0.000442s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '010000000000004b' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015036s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000046' ORDER BY datetime desc LIMIT 1   [ RunTime:0.019190s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9220'  [ RunTime:0.000369s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000041' ORDER BY datetime desc LIMIT 1   [ RunTime:0.018482s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000054' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015287s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9231'  [ RunTime:0.000428s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '010000000000005d' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015201s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '060000000000004a' ORDER BY datetime desc LIMIT 1   [ RunTime:0.019103s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9218'  [ RunTime:0.000369s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000051' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015094s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '060000000000002e' ORDER BY datetime desc LIMIT 1   [ RunTime:0.019060s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9221'  [ RunTime:0.000355s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '010000000000004c' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015041s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000019' ORDER BY datetime desc LIMIT 1   [ RunTime:0.019335s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9217'  [ RunTime:0.000350s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000059' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015155s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000035' ORDER BY datetime desc LIMIT 1   [ RunTime:0.019197s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9213'  [ RunTime:0.000348s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000064' ORDER BY datetime desc LIMIT 1   [ RunTime:0.014876s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000030' ORDER BY datetime desc LIMIT 1   [ RunTime:0.019174s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9210'  [ RunTime:0.000352s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '010000000000005f' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015182s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9209'  [ RunTime:0.000417s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000060' ORDER BY datetime desc LIMIT 1   [ RunTime:0.014820s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000034' ORDER BY datetime desc LIMIT 1   [ RunTime:0.019139s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9247'  [ RunTime:0.000300s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000053' ORDER BY datetime desc LIMIT 1   [ RunTime:0.014903s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000048' ORDER BY datetime desc LIMIT 1   [ RunTime:0.018844s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9208'  [ RunTime:0.000308s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000036' ORDER BY datetime desc LIMIT 1   [ RunTime:0.018231s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9214'  [ RunTime:0.000289s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000056' ORDER BY datetime desc LIMIT 1   [ RunTime:0.015090s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000032' ORDER BY datetime desc LIMIT 1   [ RunTime:0.018753s ]
+SQL: SELECT * FROM room_sensor WHERE floor_id = '7' AND room_id = '9216'  [ RunTime:0.000282s ]
+SQL: SELECT * FROM tem_hum_para WHERE dev_eui = '0100000000000049' ORDER BY datetime desc LIMIT 1   [ RunTime:0.014863s ]
+SQL: SELECT * FROM smoke_para WHERE dev_eui = '0600000000000045' ORDER BY datetime desc LIMIT 1   [ RunTime:0.018708s ]
+

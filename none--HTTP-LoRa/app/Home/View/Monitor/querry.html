@@ -1,0 +1,101 @@
+	<div id="checkBox" class="check">
+		<div class="checkBoxTop" >
+			<a>历史记录查询</a>
+			
+			<div style="width:20px;height: 20px;border-radius: 50% 50%;float: right;margin-right:10px;;margin-top:10px; margin-right:5px;background:rgba(34,117,76,0.7);" onclick="setClose(1)">
+				<a style="font-size:25px;width:10px;height:10px;margin-top:-8px;margin-left:12px;float:left;color:#000; transform:rotate(45deg);cursor:pointer; ">+</a><!---->
+				
+			</div>
+			
+			<div id="hisDateBox" onclick="chooseHisDateBox(0)">
+				今天
+			</div>
+
+			<div id="roomChooseBox" onclick="chooseRoomBox(0)" >
+				房间选择
+			</div>
+
+		</div>
+		
+		<div class="dateLiBox">
+			<li onclick="chooseHisDateBox(8)">
+			今天
+			</li>
+			<li onclick="chooseHisDateBox(1)">
+			前1天
+			</li>
+			<li onclick="chooseHisDateBox(2)">
+			前2天
+			</li>
+			<li onclick="chooseHisDateBox(3)">
+			前3天
+			</li>
+			<li onclick="chooseHisDateBox(4)">
+			前4天
+			</li>
+			<li onclick="chooseHisDateBox(5)">
+			前5天
+			</li>
+			<li onclick="chooseHisDateBox(6)">
+			前6天
+			</li>
+			<li onclick="chooseHisDateBox(7)">
+			前7天
+			</li>
+		</div>
+
+		<div class="roomLiBox">
+			<li onclick="chooseRoomBox(1)">
+			房间1
+			</li>
+			<li onclick="chooseRoomBox(2)">
+			房间2
+			</li>
+		</div>
+
+		
+		<div id="hisDataContainer">
+		<div style="width:70%;height:500px;float: left;">
+			<table class="dataForm">
+				<thead>
+					<tr>
+						<th>时刻表</th>
+						<th>平均温度(℃)</th>
+						<th>平均湿度(%RH)</th>
+						<th>门禁状态</th>
+					</tr>
+				</thead>
+				<tbody id="mytbody">
+					
+				</tbody>
+			</table>
+		</div>
+		<div style="width: 15%;height:500px;float: left;">
+			<table class="dataForm">
+				<thead>
+					<tr>
+						<th>烟雾报警记录</th>			
+					</tr>
+				</thead>
+				<tbody id="smokeBody">
+						
+				</tbody>
+			</table>
+		</div>
+
+		<div style="width: 15%;height:500px;float: left;">
+			<table class="dataForm">
+				<thead>
+					<tr>
+						<th>水浸报警记录</th>				
+					</tr>
+				</thead>
+				<tbody id="waterBody">
+					
+				</tbody>
+			</table>
+		</div>
+
+	</div>
+		
+</div>

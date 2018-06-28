@@ -1,0 +1,9 @@
+.reset{
+	position:absolute;
+	border-radius:20px;
+	/*opacity:0;*/
+/*	z-index:-10;*/
+	border: 1px solid  #4A79A9;
+	color:#fff;
+	background-image:url(../img/sky2.png);
+}
